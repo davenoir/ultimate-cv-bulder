@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!--Tags input and fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="node_modules/dom-to-image/src/dom-to-image.js" ></script>
+    <title>DIGITAL MARKETING</title>
+    <style>
+        .label-info {
+            background-color: #2CBBAD !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid cvContainer">
+        <div class="row">
+            <div class="col-md-6 offset-md-1 cvTool fadeInAmate">
+                <div class="row">
+                    <div class="col-md-12 " style="margin-top: 2%;">
+                        <button id="cvBtn" type="button" class="btn custom builderBtns">CV</button>
+                        <button id="linkedinBtnShow" type="button" class="btn custom builderBtns">LinkedIn</button>
+                        <button id="laikaBtnShow" type="button" class="btn custom builderBtns">wearelaika.com</button>
+                        <button id="cvEdit" type="button" class="btn editBtn" style="float: right;">Edit</button>
+                    </div>
+                </div>
+                <div class="row cv2Main cvHideShow" id="cvThreeContainer" style="margin-bottom: 10%; margin-top: 3%; margin-left: 2%;">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-3 digitalPhoto">
+                                <div id="profileContainerDataScience">
+                                    <image id="profileImage" src="https://pbs.twimg.com/media/CCtGYRIWEAAvd7l.jpg" class="img-fluid" alt="Image size should be 400x400 or 900x900 max" />
+                                </div>
+                                <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+
+                            </div>
+                            <div class="col-md-5 digitalAbout">
+                                <div class="form-group">
+                                    <input class="inputCv2" type="text" placeholder="Enter full name" style="font-weight: bold; font-size: large;">
+                                    <input class="inputCv1" type="text" placeholder="Enter occupation" style="font-size: x-small; font-weight: lighter; color: #2CBBAD;">
+                                    <br>
+                                    <textarea class="textCv2" rows="6" cols="70" placeholder="Write about yourself" style="font-size: smaller;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center digitalMarketInfo digitalContact" style="margin-top: 5%; margin-bottom: 2%; padding-top: 2%; padding-bottom: 2%;">
+                            <div class="col-md-6">
+                                <div style="display: flex; float: right;">
+                                    <i class="fa fa-envelope-open-o" style="font-size:15px; margin-right: 2%;"></i><input class="inputCv1" type="text" placeholder="enter e-mail" style="font-size: smaller;">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div style="display: flex; float: left;">
+                                    <i class="fa fa-mobile-phone" style="font-size:15px; margin-right: 2%;"></i><input class="inputCv1" type="text" placeholder="enter phone number" style="font-size: smaller;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 style="font-weight: 900; color: #2CBBAD;">WORK EXPERIENCE</h4>
+                            <div class="workPosition digitalWork">
+                                <div class="jobContent">
+                                    <i class="fa fa-remove" style="color: gray; margin-right: 4%; margin-left: -8%;"></i>
+                                    <input class="inputCv1" type="text" placeholder="enter work position" style="font-weight: bold;">
+                                    <input class="inputCv1" type="text" placeholder="enter company" style="font-size: smaller;">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <input class="inputCv1" type="date" value="2019-01-01" style="font-size: smaller; color: #2CBBAD;">
+                                        </div>
+                                        <div class="col-md-4 offset-md-1">
+                                            <input class="inputCv1" type="text" placeholder="enter place" style="font-size: smaller; color:#2CBBAD;">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="experienceContent">
+                                        <div style="display: flex;">
+                                            <i class="fa fa-remove" style="color: gray; margin-right: 4%; margin-left: -8%;"></i>
+                                            <i class="fa fa-circle" style="color: #2CBBAD; margin-right: 1%;"></i><textarea class="textCv1" rows="3" cols="40" placeholder="Write about your experience" style="font-size: x-small;"></textarea>
+                                        </div>
+                                        <br>
+                                        <div class="addExperience" style="display: flex; margin-bottom: 8%;">
+                                            <i class='fa fa-plus-circle' style="color: #2CBBAD; font-size:12px;" id="addMore"><span style="font-size: xx-small; color: #2CBBAD;">Add
+                                                    experience</span></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="addJob" style="display: flex; margin-bottom: 8%;">
+                                <i class='fa fa-plus-circle' style="color: #2CBBAD; font-size:12px;" id="addMore"><span
+                                        style="font-size: xx-small; color: #2CBBAD;">Add
+                                        Job</span></i>
+                            </div>
+                            <h4 style="font-weight: 900; color: #2CBBAD; margin-top: 10%; margin-bottom: 5%;">EDUCATION
+                            </h4>
+                            <div class="education digitalEdu">
+                                <div class="educationContent">
+                                    <i class="fa fa-remove" style="color: gray; margin-right: 4%; margin-left: -10%;"></i>
+                                    <input class="inputCv1" type="text" placeholder="enter education" style="font-weight: bold;">
+                                    <textarea class="textCv1" rows="2" cols="40" placeholder="enter school" style="font-size: x-small;"></textarea>
+                                    <div class="row" style="margin-bottom: 3%;">
+                                        <div class="col-md-4">
+                                            <input class="inputCv1" type="date" value="2019-01-01" style="font-size: smaller; color: #2CBBAD;">
+                                        </div>
+                                        <div class="col-md-4 offset-md-1">
+                                            <input class="inputCv1" type="text" placeholder="enter place" style="font-size: smaller; color:#2CBBAD;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="addEducationCV3" style="display: flex; margin-bottom: 8%;">
+                                <i class='fa fa-plus-circle' style="color: #2CBBAD; font-size:12px;" id="addMore"><span
+                                        style="font-size: xx-small; color: #2CBBAD;">Add
+                                        Education</span></i>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 style="font-weight: 900; color: #2CBBAD; margin-bottom: 5%;">
+                                SKILLS
+                            </h4>
+                            <div class="row digitalSkills" style="margin-left: 1%;">
+                                <input type="text" value="" data-role="tagsinput" id="tags" class="form-control">
+                            </div>
+
+                            <h4 style="font-weight: 900; color: #2CBBAD;">
+                                ACHIEVEMENTS
+                            </h4>
+
+                            <div class="row digitalAch" style="margin-left: 1%;">
+                                <div class="projectsDiv">
+                                    <div style="display: flex;">
+                                        <i class="fa fa-remove" style="color: gray; margin-right: 4%; margin-left: -8%;"></i>
+                                        <i class="fa fa-circle" style="color: #2CBBAD; margin-right: 1%;"></i><textarea class="textCv1" rows="3" cols="40" placeholder="Write about your achievement" style="font-size: x-small;"></textarea>
+                                    </div>
+                                </div>
+                                <div class="addAchievement" style="display: flex; margin-bottom: 8%; margin-left: 3%;">
+                                    <i class='fa fa-plus-circle' style="color: #2CBBAD; font-size:12px;" id="addMore"><span
+                                            style="font-size: xx-small; color: #2CBBAD;">Add
+                                            achievement</span></i>
+                                </div>
+                            </div>
+
+                            <h4 style="font-weight: 900; color: #2CBBAD; margin-bottom: 5%;">
+                                LANGUAGES
+                            </h4>
+
+                            <div class="row digitalLang" style="margin-left: 1%;">
+                                <div class="languageDiv">
+                                    <div class="languageContents">
+                                        <i class="fa fa-remove" style="color: gray; margin-right: 3%; margin-left: -8%;"></i>
+                                        <input class="inputCv1" type="text" placeholder="Enter language" style="font-weight: bold;">
+                                        <textarea class="textCv1" rows="2" cols="35" placeholder="level of knowledge" style="font-size: small; color: #2CBBAD;"></textarea>
+                                    </div>
+                                </div>
+                                <div class="addLanguageCV3" style="display: flex; margin-bottom: 8%; margin-left: 3%;">
+                                    <i class='fa fa-plus-circle' style="color: #2CBBAD; font-size:12px;" id="addMore"><span
+                                            style="font-size: xx-small; color: #2CBBAD;">Add
+                                            language</span></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Map area of CV Three example -->
+                <div class="cv2Container">
+                    <div class="row imageRow" style="margin-top:1%">
+                        <div class="col-md-11">
+                            <img src="Assets/img/DMR.png" class="img-fluid" usemap="#digital">
+                            <map name="digital">
+                                    <area class="digitalAbout" target="" alt="name_about" title="name & about" href="" coords="127, 14, 512, 85" shape="rect">
+                                    <area class="digitalPhoto" target="" alt="picture" title="picture" href="" coords="68, 58, 38" shape="circle">
+                                    <area class="digitalContact" target="" alt="name_about" title="contact" href="" coords="59, 106, 520, 149" shape="rect">
+                                    <area class="digitalWork" target="" alt="name_about" title="work" href="" coords="20, 173, 290, 522" shape="rect">
+                                    <area class="digitalEdu" target="" alt="name_about" title="education" href="" coords="20, 572, 292, 770" shape="rect">
+                                    <area class="digitalSkills" target="" alt="name_about" title="skills" href="" coords="311, 171, 565, 271" shape="rect">
+                                    <area class="digitalAch" target="" alt="name_about" title="achievements" href="" coords="310, 293, 565, 357" shape="rect">
+                                    <area class="digitalLang" target="" alt="name_about" title="Languages" href="" coords="310, 401, 569, 440" shape="rect">
+                                </map>
+                        </div>
+                    </div>
+                </div>
+                <!--Laika pages mapping with info section-->
+                <div class="row" style="margin-top: 5%; margin-bottom: 5%;" id="LaikaPages">
+                    <div class="col-md-12">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="Assets/img/Laika1.png" alt="Second slide" usemap="#laika1">
+                                    <map name="laika1">
+                                        <area class="basicInfo" target="" alt="name_about" title="Basic info" href="" coords="41, 25, 445, 314" shape="rect">
+                                        <area class="Portfolio" target="" alt="name_about" title="Navigate portfolio" href="" coords="477, 27, 612, 320" shape="rect">
+                                    </map>
+
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="Assets/img/Laika2.png" alt="Second slide" usemap="#laika2">
+                                    <map name="laika2">
+                                        <area class="linksSocial" target="" alt="name_about" title="Links to portfolio" href="" coords="50, 21, 649, 241" shape="rect">
+                                        <area class="purpose" target="" alt="name_about" title="Choose a purpose" href="" coords="10, 480, 734, 563" shape="rect">
+                                    </map>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="Assets/img/Laika3.png" alt="Second slide" usemap="#laika3">
+                                    <map name="laika3">
+                                        <area class="industry" target="" alt="name_about" title="choose skills" href="" coords="33, 162, 686, 365" shape="rect">
+                                        <area class="work" target="" alt="name_about" title="work experience" href="" coords="28, 446, 747, 729" shape="rect">
+                                    </map>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="Assets/img/Laika4.png" alt="Second slide" usemap="#laika4">
+                                    <map name="laika4">
+                                        <area class="education" target="" alt="name_about" title="education" href="" coords="92, 29, 692, 281" shape="rect">
+                                    </map>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="Assets/img/Laika5.png" alt="Second slide" usemap="#laika5">
+                                    <map name="laika5">
+                                        <area class="lexperience" target="" alt="name_about" title="experience" href="" coords="74, 28, 719, 173" shape="rect">
+                                        <area class="salary" target="" alt="name_about" title="salary" href="" coords="76, 245, 722, 453" shape="rect">
+                                        <area class="jobPlan" target="" alt="name_about" title="type of job" href="" coords="76, 521, 724, 693" shape="rect">
+                                    </map>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--Linkedin pages mapping with info section-->
+                <div class="row" style="margin-top: 5%; margin-bottom: 5%;" id="LinkedinPages">
+                    <div class="col-md-12">
+                        <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="Assets/img/bill1.png" alt="Second slide" usemap="#linkedin1">
+                                    <map name="linkedin1">
+                                        <area class="linkedCoverImg"target="" alt="name_about" title="cover" href="" coords="191, 24, 703, 173" shape="rect">
+                                        <area class="linkedProfileImg" target="" alt="picture" title="picture" href="" coords="116, 147, 63" shape="circle">
+                                        <area class="linkedAbout" target="" alt="name_about" title="about" href="" coords="24, 383, 698, 513" shape="rect">
+                                    </map>
+
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="Assets/img/bill2.png" alt="Second slide" usemap="#linkedin2">
+                                    <map name="linkedin2">
+                                        <area class="linkedArticles" target="" alt="name_about" title="Articles" href="" coords="59, 15, 348, 413" shape="rect">
+                                    </map>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="Assets/img/bill3.png" alt="Second slide" usemap="#linkedin3">
+                                    <map name="linkedin3">
+                                        <area class="linkedExperience" target="" alt="name_about" title="experience" href="" coords="48, 55, 550, 231" shape="rect">
+                                        <area class="linkedEdu" target="" alt="name_about" title="education" href="" coords="50, 281, 552, 475" shape="rect">
+                                    </map>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="Assets/img/bill4.png" alt="Second slide" usemap="#linkedin4">
+                                    <map name="linkedin4">
+                                        <area class="linkedInt" target="" alt="name_about" title="interests" href="" coords="73, 33, 644, 304" shape="rect">
+                                    </map>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="downloadBtnCV" id="downloadBtnCV3">
+                    <button type="button" class="btn downloadBtn">Download</button>
+                </div>
+            </div>
+            <!--Info on hover section (text added with jQuery on hover-->
+            <div class="col-md-3 infoOnHover fadeInAmate">
+
+            </div>
+        </div>
+    </div>
+    <!--Popup wrapper section-->
+    <div id="popup" class="popup__wrapper">
+        <div class="container popup__container">
+            <i class="fa fa-times-circle" id="removePopUp" style="color: black; position: absolute; margin-left: 95%;"></i>
+            <div class="row">
+                <div class="col-md-4" style="position: absolute; margin-left: 10%; margin-top: 8%;">
+                    <h1>Did you finish all <br> three? Way to go!</h1>
+                    <br>
+                    <h5>Good luck on your next job! If <br> you need help, counseling or
+                        <br> just want to leave a suggestion,
+                        <br> contact us at <br>
+                        <span style="color: crimson; font-weight: bold;">hello@wearelaika.com</span>
+                    </h5>
+                </div>
+                <div class="col-md-8" style="margin-left: 25%; margin-top: 3%;">
+                    <img src="Assets/img/pop-up.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid fixed-bottom" style="margin-top: 5%;">
+        <div class="row" style=" background-color: white; opacity: 80%;">
+            <div class="col-md-12 text-center ">
+                <p class="text-muted " style="font-size: small; ">Created with &#9829; by  <span style="font-weight: 900;">&COPY; Dave_Noir </span></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="Assets/js/script.js"></script>
+    <script src="Assets/js/jquery.fadeInAmate.js"></script>
+</body>
+
+</html>
